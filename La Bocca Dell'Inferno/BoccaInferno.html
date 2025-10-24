@@ -46,10 +46,20 @@
     <main class="container">
             <!-- Summary navigation always visible -->
             <nav class="summary-nav" aria-label="Navigazione riassunto">
+                <!-- Home button on the left of chapter links -->
+                <a class="home-btn" href="../Introduzione/index.html" title="Torna alla home" aria-label="Torna alla home">
+                    <i class="ri-home-4-line" aria-hidden="true"></i>
+                </a>
                 <a href="#para1">Introduzione</a>
                 <a href="#para2">L'Incontro</a>
                 <a href="#para3">Lo Sfruttamento</a>
                 <a href="#para4">Epilogo</a>
+                <!-- Controls group: only audio here, kept separated and pushed to the end. -->
+                <div class="summary-controls" role="group" aria-label="Controlli pagina">
+                    <button class="audio-toggle" aria-pressed="false" aria-label="Attiva o disattiva sottofondo musicale" title="Musica">
+                        <i class="ri-music-2-line" aria-hidden="true"></i>
+                    </button>
+                </div>
             </nav>
 
             <!-- Summary container: visible by default -->
@@ -93,8 +103,13 @@
 
         </div> <!-- /#viewport -->
 
-        <footer class="foot">Pagina creata per il progetto &mdash; apri nel browser per vedere lo stile distopico.</footer>
+        <!-- Background audio element: replace ./audio/ambient.mp3 with your file (optional) -->
+        <audio id="bg-audio" loop preload="metadata">
+            <source src="./audio/ambient.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+        </audio>
 
         <script src="./scriptBoccaInferno.js"></script>
     </body>
+        
 </html>
